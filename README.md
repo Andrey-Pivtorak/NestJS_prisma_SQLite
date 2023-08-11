@@ -11,7 +11,7 @@
 
 ### Description
 In this documentation is described the way how to set up a mock server and mock database for API testing. It will be get as a result a mock server, mock database, swagger API documentation.
-* [tests](https://github.com/Luxe-Quality/NestJS_prisma_SQLite.git) `repository - mock-server`
+* [tests](https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git) `repository - mock-server`
 
 ### Structure
 
@@ -171,10 +171,10 @@ Edit all the files from "prisma", "src", "test" folders following the examples o
 
 ### Usage
 
-Download the project from the [repository](https://github.com/Luxe-Quality/NestJS_prisma_SQLite.git) and open the project folder in the console. Run the command "npm install" in console. Wait until all modules are installed.
+Download the project from the [repository](https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git) and open the project folder in the console. Run the command "npm install" in console. Wait until all modules are installed.
 
 ```console
-  git clone https://github.com/Luxe-Quality/NestJS_prisma_SQLite.git
+  git clone https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git
 ```
 ```console
   npm install
