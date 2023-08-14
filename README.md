@@ -10,7 +10,7 @@
 - [Running setup](#running-setup)
 
 ### Description
-In this documentation is described the way how to set up a mock server and mock database for API testing. It will be get as a result a mock server, mock database, swagger API documentation.
+This documentation has described the way how to set up a mock server and mock database for API testing. It will get as a result a mock server, mock database, and Swagger API documentation.
 * [tests](https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git) `repository - mock-server`
 
 ### Structure
@@ -43,11 +43,11 @@ In this documentation is described the way how to set up a mock server and mock 
 
 - "dist" - is a folder with files converted to .js format and are used for running the mock-server
 - "node_modules" is a folder containing node.js modules needed to run tests
-- "prisma" is a folder containing migrations files, mock database and scheme of the database.
+- "prisma" is a folder containing migrations files, a mock database, and a scheme of the database.
 - "src" is a folder containing all the entities of the project, controller, module, and service files.
 - "test" is a folder containing all the existing tests
 - ".env" is a file where are variables which are set up using "secrets variables"
-- ".gitignore" is a file containing the names of files and folders that are excluded from uploading to github
+- ".gitignore" is a file containing the names of files and folders that are excluded from uploading to GitHub
 - "package.json" is a file containing all the basic data of the project, as well as dependencies necessary to run the project and the test run commands
 - "package-lock.json" is a file containing fixed project dependencies for a quick installation
 - "README.md" is a file containing a description and brief documentation of the project
@@ -64,9 +64,9 @@ In this documentation is described the way how to set up a mock server and mock 
 
 Before building the project, there need to install a [node.js](https://nodejs.org/en/) at least 16 versions and install all the dependencies that are necessary for the full operation of the node.js.
 
->**WARNING**: It necessary to use only LTS version
+>**WARNING**: It necessary to use only the LTS version
 
-*This repository can be used like an example.
+*This repository can be used as an example.
 
 1. Install NestJS cli:
 ```
@@ -79,7 +79,7 @@ Before building the project, there need to install a [node.js](https://nodejs.or
 
 The mock-server directory will be created, node modules and a few other boilerplate files will be installed, and a src/ directory will be created and populated with several core files.
 
-The structure of src folder:
+The structure of the src folder:
 ```
   src
   |-app.controller.spec.ts
@@ -113,7 +113,7 @@ The structure of src folder:
   url      = env("DATABASE_URL")
 }
 ```
-After that it is necessary to create schema model.
+After that, it is necessary to create a schema model.
 
 6. Run SQL migration:
 ```
@@ -125,14 +125,14 @@ After that it is necessary to create schema model.
   npm install @prisma/client
 ```
 
-8. Generate a prisma module:
+8. Generate a Prisma module:
 ```
   npx nest generate module prisma
 ```
-After changing prisma schema (each time) run the command:
-prisma generate.
+After changing the Prisma schema (each time) run the command:
+Prisma generate.
 
-9. Generate a prisma service:
+9. Generate a Prisma service:
 ```
   npx nest generate service prisma
 ```
@@ -155,13 +155,13 @@ The "transport layer" should be chosen "REST API"
   npm install class-validator class-transformer
 ```
 
-13. Generate a prisma exception filter:
+13. Generate a Prisma exception filter:
 ```
   npx nest generate filter prisma-client-exception
 ```
-After that the "prisma-client-exception" folder with files inside the "src" folder is created.
+After that, the "prisma-client-exception" folder with files inside the "src" folder is created.
 
-14. Install dotenv library:
+14. Install a dotenv library:
 ```
   npm i dotenv-cli --save-dev
 ```
@@ -171,7 +171,7 @@ Edit all the files from "prisma", "src", "test" folders following the examples o
 
 ### Usage
 
-Download the project from the [repository](https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git) and open the project folder in the console. Run the command "npm install" in console. Wait until all modules are installed.
+Download the project from the [repository](https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git) and open the project folder in the console. Run the command "npm install" in the console. Wait until all modules are installed.
 
 ```console
   git clone https://github.com/Andrey-Pivtorak/NestJS_prisma_SQLite.git
@@ -205,12 +205,12 @@ To run the mock server is used the command in a cli:
   npm run start:dev
 ```
 
-To open a database in browser is used the command:
+To open a database in the browser is used the command:
 ```
   npm run prisma:studio
 ```
 
-To open OpenAPI documentation in swagger is used the url in a WEB-browser (after running a mock-server):
+To open OpenAPI documentation in Swagger is used the URL in a WEB browser (after running a mock server):
 ```
   http://localhost:3000/api
 ```
@@ -219,6 +219,8 @@ To open OpenAPI documentation in swagger is used the url in a WEB-browser (after
 To stop the nest mock server use the "**Ctrl+C**" buttons.
 
 All the existing endpoints are in the articles.controller.ts file.
-The main endpoint in this project is /articles (@Controller('articles')). There are used decorators in the NestJS framework (@Controller, @ApiTags, @UseFilters, @Get, @Post, @Body, @Param, @Delete).It helps to structure the code.
+The main endpoint in this project is /articles (@Controller('articles')). There are used decorators in the NestJS framework (@Controller, @ApiTags, @UseFilters, @Get, @Post, @Body, @Param, @Delete). It helps to structure the code.
 
 To interact with a database can be used Postman, Axios, and other tools.
+
+*To handle different response errors use the [link](https://www.prisma.io/docs/reference/api-reference/error-reference#p2000) from the Prisma docs.
